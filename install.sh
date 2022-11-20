@@ -18,7 +18,7 @@ fi
 while true; do
 RESET="\e[0m"
 GREEN="\e[32m"
-read -p "$(echo -e $GREEN\n* Do you want to proceed? (Y/N)"$RESET"yn
+read -p "$(echo -e $GREEN\n* Do you want to proceed? (Y/N)"$RESET" yn
 case $yn in
 [yY] ) echo -e "\e[32m* Confirmed. Continuing..\e[0m";
 break;;
