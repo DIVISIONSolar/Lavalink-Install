@@ -164,7 +164,7 @@ echo "
         "script":"/usr/bin/java",
         "args":[
             "-jar",
-            "/root/freelavalink/Lavalink.jar",
+            "/root/Lavalink/Lavalink.jar",
         ],
         "exec_interpreter":"",
         "exec_mode":"fork"
