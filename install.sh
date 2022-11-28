@@ -74,13 +74,12 @@ fi
 # Install Lavalink
 echo -e "\e[32m* Starting Lavalink Installation\e[0m"
 mkdir ~/Lavalink && cd ~/Lavalink
-wget https://github.com/Cog-Creators/Lavalink-Jars/releases/latest/download/Lavalink.jar > /dev/null 2>&1
+wget https://cdn.darrennathanael.com/jars/Lavalink.jar > /dev/null 2>&1
 echo "What port do you want your Lavalink to run on?"
 read Lava_Port
 echo "What password do you want to set for your Lavalink?"
 read Lava_Pass
-echo "
-server: # REST and WS server
+echo "server: # REST and WS server
   port: $Lava_Port
   address: 0.0.0.0
 
@@ -88,11 +87,11 @@ lavalink:
   server:
     password: \"$Lava_Pass\"
     playerUpdateInterval: 5 # How frequently to send player updates to clients, in seconds
-    statsTaskInterval: 30 # How frequently to send the node stats to clients, in seconds
+    statsTaskInterval: 60 # How frequently to send the node stats to clients, in seconds
     koe:
       useEpoll: true
       highPacketPriority: true
-      bufferDurationMs: 200
+      bufferDurationMs: 400
       byteBufAllocator: "default"
     sources:
       # Remote sources
@@ -113,15 +112,15 @@ lavalink:
     lavaplayer:
       nonAllocating: false # Whether to use the non-allocating frame buffer.
       frameBufferDuration: 5000 # The frame buffer duration, in milliseconds
-      youtubePlaylistLoadLimit: 60 # Number of pages at 100 each
+      youtubePlaylistLoadLimit: 6 # Number of pages at 100 each
       gc-warnings: true
       youtubeSearchEnabled: true
       odyseeSearchEnabled: true
       soundcloudSearchEnabled: true
       yandexMusicSearchEnabled: true
-      #youtubeConfig:
-      #  email: ""
-      #  password: ""
+      #youtubeConfig: (Youtube account credentials, needed to play age restricted tracks)
+        #email: ""
+        #password: ""
       # You can get your yandex oauth token here https://music-yandex-bot.ru/ used to remove the 30s limit on some tracks
       #yandexOAuthToken:
       #ratelimit:
@@ -143,35 +142,19 @@ sentry:
 #    some_key: some_value
 #    another_key: another_value
 
-#logging:
-#  file:
-#    path: ./logs/
-#  logback:
-#    rollingpolicy:
-#      max-file-size: 1GB
-#      max-history: 30
+logging:
+  file:
+    path: ./logs/
+  logback:
+    rollingpolicy:
+      max-file-size: 1GB
+      max-history: 30
 
   level:
     root: INFO
     lavalink: INFO
 " > application.yml
-echo "
-{
-    "apps":[
-    {
-        "name":"Lavalink",
-        "cwd":".",
-        "script":"/usr/bin/java",
-        "args":[
-            "-jar",
-            "/root/Lavalink/Lavalink.jar",
-        ],
-        "exec_interpreter":"",
-        "exec_mode":"fork"
-     }
-   ]
-}
-" > config.json
+
 echo -e "\e[32m* Lavalink Installation Completed\e[0m"
 
 # Start Lavalink
