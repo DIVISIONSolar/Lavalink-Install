@@ -74,7 +74,7 @@ fi
 # Install Lavalink
 echo -e "\e[32m* Starting Lavalink Installation\e[0m"
 mkdir ~/Lavalink && cd ~/Lavalink
-wget https://cdn.darrennathanael.com/jars/Lavalink.jar > /dev/null 2>&1
+wget https://cdn.joshsevero.dev/u/VfWVMa.jar > /dev/null 2>&1
 echo "What port do you want your Lavalink to run on?"
 read Lava_Port
 echo "What password do you want to set for your Lavalink?"
