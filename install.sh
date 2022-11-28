@@ -3,8 +3,6 @@ set -e
 echo -e "\e[32m
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #              Lavalink Installation Script             #
-#         Created and maintained by Josh S.             #
-#       Author Josh S. | https://joshsevero.dev         #
 #       This Script only works on Ubuntu & Debian       #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\e[0m"
 
