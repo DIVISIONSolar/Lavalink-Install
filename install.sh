@@ -177,6 +177,6 @@ echo "
 echo -e "\e[32m* Lavalink Installation Completed\e[0m"
 
 # Start Lavalink
-sudo pm2 start ~/Lavalink/config.json Lavalink.jar --name "Lavalink"
+sudo pm2 start ~/Lavalink/config.json --name "Lavalink"
 sudo pm2 startup
 sudo pm2 save
