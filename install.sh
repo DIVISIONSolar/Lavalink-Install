@@ -155,23 +155,7 @@ sentry:
     root: INFO
     lavalink: INFO
 " > application.yml
-echo "
-{
-    "apps":[
-    {
-        "name":"Lavalink",
-        "cwd":".",
-        "script":"/usr/bin/java",
-        "args":[
-            "-jar",
-            "/root/Lavalink/Lavalink.jar",
-        ],
-        "exec_interpreter":"",
-        "exec_mode":"fork"
-     }
-   ]
-}
-" > config.json
+wget https://raw.githubusercontent.com/DIVISIONSolar/Lavalink-Install/main/config.json > /dev/null 2>&1
 echo -e "\e[32m* Lavalink Installation Completed\e[0m"
 
 # Start Lavalink
