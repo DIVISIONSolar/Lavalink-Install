@@ -1,0 +1,15 @@
+{
+    "apps":[
+    {
+        "name":"Lavalink",
+        "cwd":".",
+        "script":"/usr/bin/java",
+        "args":[
+            "-jar",
+            "/root/Lavalink/Lavalink.jar",
+        ],
+        "exec_interpreter":"",
+        "exec_mode":"fork"
+     }
+   ]
+}
